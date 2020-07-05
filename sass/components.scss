@@ -1,0 +1,140 @@
+// Text Color
+@each $name,
+$value in $colors {
+    .color--#{$name} {
+        color: $value;
+    }
+}
+
+.title {
+    margin-bottom: 50px;
+    @media screen and(max-width: 480px) {
+        margin-bottom: 30px;
+    }
+    &--sm {
+        margin-bottom: 30px;
+    }
+    &--lg {
+        margin-bottom: 70px;
+    }
+    .subtitle {
+        font-size: $base-font-size;
+        letter-spacing: 0.04em;
+    }
+    h2 {
+        font-weight: 700;
+        color: color('gray');
+    }
+}
+
+.divider {
+    height: 40px;
+    @media screen and (max-width: 480px) {
+        height: 25px;
+    }
+    &--sm {
+        height: 30px;
+    }
+    &--xs {
+        height: 20px;
+    }
+}
+
+.dripicons {
+    position: relative;
+    top: 3px;
+}
+
+.icon {
+    &--left {
+        margin-right: 5px;
+    }
+}
+
+.form-group {
+    .form-control {
+        padding: 10px;
+        background-color: transparentize($color: color('yellow'), $amount: .9);
+        border: 1px solid color('yellow');
+        &:focus{
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+}
+
+::-webkit-input-placeholder {
+    color: transparentize($color: color('yellow'), $amount: .3)!important;
+}
+
+::-moz-placeholder {
+    color: transparentize($color: color('yellow'), $amount: .3)!important;
+}
+
+:-ms-input-placeholder {
+    color: transparentize($color: color('yellow'), $amount: .3)!important;
+}
+
+:-moz-placeholder {
+    color: transparentize($color: color('yellow'), $amount: .3)!important;
+}
+
+.btn--subscribe {
+    padding: 15px 10px;
+    background-color: color('yellow');
+    color: color('white');
+    &:hover{
+        @include box-shadow(0 10px 30px transparentize(color('yellow'),.3));
+    }
+}
+
+.container {
+    @media screen and(min-width: 576px) {
+        max-width: 85%;
+    }
+    @media screen and(max-width: 576px) {
+        width: 85%;
+    }
+}
+
+
+.md-none {
+    @media screen and (max-width: 768px) {
+        display: none
+    }
+}
+
+.sm-center {
+    @media screen and (max-width: 768px) {
+        text-align: center !important;
+    }
+}
+
+.ms-center {
+    @media screen and (max-width: 567px) {
+        text-align: center !important;
+    }
+}
+
+.ms-none {
+    @media screen and (max-width: 576px) {
+        display: none
+    }
+}
+
+.ms-divider {
+    @media screen and (max-width: 576px) {
+        height: 20px;
+    }
+}
+
+.xs-none {
+    @media screen and (max-width: 480px) {
+        display: none
+    }
+}
+.xs-center {
+    @media screen and (max-width: 480px) {
+        text-align: center!important;
+    }
+}
